@@ -1,8 +1,8 @@
 # Maintainer: Jeremy Attali <jeremy.attali@gmail.com>
 
 pkgname=jtheoof-powersave-git
-pkgver=1
-pkgrel=0.1
+pkgver=0.1
+pkgrel=1
 pkgdesc="Arch Linux Powersave package for Dell Inspiron 7000 (7537)"
 
 arch=('any')
@@ -12,11 +12,6 @@ depends=('systemd' 'ethtool')
 makedepends=('git')
 source=("git+file://$PWD")
 sha1sums=('SKIP')
-
-pkgver() {
-  cd "powersave"
-  git log -1 --format="%cd" --date=short | sed 's|-||g'
-}
 
 package() {
   cd "powersave"
