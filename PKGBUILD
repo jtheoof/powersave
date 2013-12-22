@@ -21,6 +21,7 @@ package() {
   cd "powersave"
   install -Dm755 bin/powersave "$pkgdir/usr/local/bin/powersave"
   install -Dm644 rules.d/50-powersave.rules "$pkgdir/etc/udev/rules.d/50-powersave.rules"
+  install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
 }
 
 # vim: ft=sh syn=sh sts=2 sw=2 et
