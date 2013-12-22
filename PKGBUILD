@@ -6,7 +6,7 @@ pkgver() {
   cd "powersave"
   git describe | sed 's/^v//;s/-/./g'
 }
-pkgrel=1
+pkgrel=0.1
 pkgdesc="Arch Linux Powersave package for Dell Inspiron 7000 (7537)"
 
 arch=('any')
