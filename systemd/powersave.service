@@ -1,0 +1,14 @@
+[Unit]
+Description=Powersave
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/local/bin/powersave
+ExecStop=/usr/local/bin/powersave false
+ExecStopPost=/bin/rm -f /var/run/powersave/enabled
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

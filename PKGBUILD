@@ -20,6 +20,7 @@ package() {
   install -Dm644 rules.d/50-powersave.rules "$pkgdir/etc/udev/rules.d/50-powersave.rules"
   install -Dm644 rules.d/50-powersave-pci.rules "$pkgdir/etc/udev/rules.d/50-powersave-pci.rules"
   install -Dm644 rules.d/50-powersave-usb.rules "$pkgdir/etc/udev/rules.d/50-powersave-usb.rules"
+  install -Dm644 systemd/powersave.service "$pkgdir/usr/lib/systemd/system/powersave.service"
   install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
 }
 
