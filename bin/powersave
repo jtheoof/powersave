@@ -4,6 +4,8 @@ on_ac() {
     echo 1 > /proc/sys/kernel/nmi_watchdog
     echo 500 > /proc/sys/vm/dirty_writeback_centisecs
     echo 0 > /proc/sys/vm/laptop_mode
+    echo 0 > /sys/module/snd_hda_intel/parameters/power_save
+    echo N > /sys/module/snd_hda_intel/parameters/power_save_controller
     ethtool -s enp3s0f1 wol g
     rfkill unblock bluetooth
 }
@@ -12,6 +14,8 @@ on_battery() {
     echo 0 > /proc/sys/kernel/nmi_watchdog
     echo 1500 > /proc/sys/vm/dirty_writeback_centisecs
     echo 5 > /proc/sys/vm/laptop_mode
+    echo 1 > /sys/module/snd_hda_intel/parameters/power_save
+    echo Y > /sys/module/snd_hda_intel/parameters/power_save_controller
     ethtool -s enp3s0f1 wol d
     rfkill block bluetooth
 }
