@@ -16,7 +16,6 @@ sha1sums=('SKIP')
 package() {
   cd "powersave"
   install -Dm755 bin/powersave "$pkgdir/usr/local/bin/powersave"
-  install -Dm644 modprobe.d/alsa-base.conf "$pkgdir/etc/modprobe.d/alsa-base.conf"
   install -Dm644 rules.d/50-powersave.rules "$pkgdir/etc/udev/rules.d/50-powersave.rules"
   install -Dm644 rules.d/50-powersave-pci.rules "$pkgdir/etc/udev/rules.d/50-powersave-pci.rules"
   install -Dm644 rules.d/50-powersave-usb.rules "$pkgdir/etc/udev/rules.d/50-powersave-usb.rules"
